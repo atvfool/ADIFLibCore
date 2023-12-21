@@ -1,7 +1,7 @@
-# ADIFLib
+# ADIFLibCore
 C# Library to read, parse and write ADIF (version 3.1.0) files.   
 
-This is a simple library for reading and parsing ADIF files, written in Visual Studio Community Edition 2017.  This library is based on .NET Standard version 2.0  ADIF version 3.1.0 is implemented.  Browse here for details regarding this version: https://adif.org/310/ADIF_310.htm
+This is a simple library for reading and parsing ADIF files, written in Visual Studio Community Edition 2017.  This library is based on .NET 6.0  ADIF version 3.1.0 is implemented.  Browse here for details regarding this version: https://adif.org/310/ADIF_310.htm
 
 ADIF files are typically used in ham radio applications but could be used by other applications as well.  
 
@@ -12,5 +12,5 @@ ADX formatted files are not yet supported but will be implemented in future vers
 If you need an ADIF parser for your amateur radio program, I hope you enjoy this library.  
 
 73
-Ken Linder
-KC7RAD
+Andrew K8ARH
+Forked from original author: Ken Linder KC7RAD
