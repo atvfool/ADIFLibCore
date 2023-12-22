@@ -144,6 +144,35 @@ namespace ADIFLib
         }
         
         /// <summary>
+        /// Read a string into an ADIF file
+        /// </summary>
+        /// <param name="ADIF"></param>
+        public void ReadFromString(string ADIF)
+        {
+            uint lineNumber = 0;
+            if (string.IsNullOrEmpty(ADIF))
+            {
+                throw new Exception("String cannot be empty!");
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(ADIF));
+
+                using (StreamReader readThiStream = new StreamReader(ms))
+                {
+                    try
+                    {
+                        ReadFromStream(readThiStream, ref lineNumber);
+                    }catch(Exception ex)
+                    {
+                        // rethrow with linenumber
+                        throw new Exception(string.Format("{0} {1}:({2})", ex.Message, ADIF, lineNumber.ToString()), ex);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Get ADIFLib version.
         /// </summary>
         public string Version
